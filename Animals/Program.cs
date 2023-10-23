@@ -1,1 +1,1 @@
-﻿using Animals;
+﻿namespace Animals;

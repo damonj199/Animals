@@ -9,17 +9,15 @@ namespace Animals
     public class Animals
     {
         public string Name { get; set; }
-        public int Weight { get; private set; }
-
-        private const int _minWeight = 30;
-        public double Age { get; private set; }
-
-        private const int _minAge = 0;
         public string View { get; set; }
         public string Habitat { get; set; }
         public double Area { get; set; }
-        public string Food { get; private set; }
         public string Sound { get; set; }
+        public int Weight { get; private set; }
+        private const int _minWeight = 30;
+        public double Age { get; private set; }
+        private const int _minAge = 0;
+        public string Food { get; private set; }
 
         public Animals(string name, int weihgt, double age, string view, string habitat, double area, string food, string sound) 
         {
@@ -56,9 +54,21 @@ namespace Animals
         {
             Console.WriteLine($"{Name}, ирать!!!");
         }
-        public void DoEat()
+        public void DoEat(string View)
         {
-            Console.WriteLine($"{Name}, кушать!");
+            if (View == "Tiger" || View == "tiger" || View == "Тигр" || View == "тигр")
+            {
+
+            Console.WriteLine($"{Name}, кормить мясом!");
+            }
+            if(View == "Elephant" || View == "elephant" || View == "Слон" || View == "слон")
+            {
+                Console.WriteLine($"{Name}, кормить травой!");
+            }
+            if(View == "Penguin" || View == "penguin" || View == "Пингвин" || View == "пингвин")
+            {
+                Console.WriteLine($"{Name}, кормить рыбой!");
+            }
         }
     }
 }
