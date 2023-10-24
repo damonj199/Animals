@@ -9,7 +9,6 @@ namespace Animals
     public class Animals
     {
         static void Main(string[] args) { }
-
         public string Name { get; set; }
         public string View { get; set; }
         public string Habitat { get; set; }
