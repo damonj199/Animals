@@ -7,7 +7,7 @@ namespace Animals.Tests
     {
         public void DoEatTest (string View, string expected)
         {
-            Animals tiger = new ("Leo", 5, 3.5, "Tiger", "Africa", 8.5, "meat", "Ppp-Ppp");
+            Animals tiger = new("Leo", 5, 3.5, "Tiger", "Africa", 8.5, "meat", "Ppp-Ppp");
 
             string actual = Animals.DoEat("Tiger");
 

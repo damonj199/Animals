@@ -8,7 +8,9 @@ namespace Animals
 {
     public class Animals
     {
-        public string Name { get; set; }
+        static void Main(string[] args) { }
+
+        public static string Name { get; set; }
         public string View { get; set; }
         public string Habitat { get; set; }
         public double Area { get; set; }
@@ -19,7 +21,7 @@ namespace Animals
         private const int _minAge = 0;
         public string Food { get; private set; }
 
-        public Animals(string name, int weihgt, double age, string view, string habitat, double area, string food, string sound) 
+        public Animals(string name, int weihgt, double age, string view, string habitat, double area, string food, string sound)
         {
             Name = name;
             if (weihgt < _minWeight)
@@ -54,19 +56,19 @@ namespace Animals
         {
             Console.WriteLine($"{Name}, ирать!!!");
         }
-        public string DoEat(string View)
+        public static string DoEat(string View)
         {
             string result = "";
             if (View == "Tiger" || View == "tiger" || View == "Тигр" || View == "тигр")
             {
 
-            result = ($"{Name}, кормить мясом!");
+                result = ($"{Name}, кормить мясом!");
             }
-            if(View == "Elephant" || View == "elephant" || View == "Слон" || View == "слон")
+            if (View == "Elephant" || View == "elephant" || View == "Слон" || View == "слон")
             {
                 result = ($"{Name}, кормить травой!");
             }
-            if(View == "Penguin" || View == "penguin" || View == "Пингвин" || View == "пингвин")
+            if (View == "Penguin" || View == "penguin" || View == "Пингвин" || View == "пингвин")
             {
                 result = ($"{Name}, кормить рыбой!");
             }
