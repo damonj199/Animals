@@ -10,7 +10,7 @@ namespace Animals
     {
         static void Main(string[] args) { }
 
-        public static string Name { get; set; }
+        public string Name { get; set; }
         public string View { get; set; }
         public string Habitat { get; set; }
         public double Area { get; set; }
@@ -56,7 +56,7 @@ namespace Animals
         {
             Console.WriteLine($"{Name}, ирать!!!");
         }
-        public static string DoEat(string View)
+        public string DoEat(string View)
         {
             string result = "";
             if (View == "Tiger" || View == "tiger" || View == "Тигр" || View == "тигр")
