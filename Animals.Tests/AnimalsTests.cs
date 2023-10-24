@@ -5,24 +5,13 @@ namespace Animals.Tests
 {
     public class AnimalsTests
     {
-        public void DoEatTest (string View)
+        public void DoEatTest (string View, string expected)
         {
-            View = "tiger";
-            string expected = $"Всех животных вида {View}, кормить мясом!";
+            Animals tiger = new ("Leo", 5, 3.5, "Tiger", "Africa", 8.5, "meat", "Ppp-Ppp");
 
-            if (View == "Tiger" || View == "tiger" || View == "Тигр" || View == "тигр")
-            {
-                Console.WriteLine($"Всех животных вида {View}, кормить мясом!");
-            }
-            if (View == "Elephant" || View == "elephant" || View == "Слон" || View == "слон")
-            {
-                Console.WriteLine($"Всех животных вида {View}, кормить травой!");
-            }
-            if (View == "Penguin" || View == "penguin" || View == "Пингвин" || View == "пингвин")
-            {
-                Console.WriteLine($"Всех животных вида {View}, кормить рыбой!");
-            }
-            Assert.That(View, Is.EqualTo(expected));
+            string actual = Animals.DoEat("Tiger");
+
+            Assert.AreEqual(expected, actual);
         }
     }
 }

@@ -54,21 +54,23 @@ namespace Animals
         {
             Console.WriteLine($"{Name}, ирать!!!");
         }
-        public void DoEat(string View)
+        public string DoEat(string View)
         {
+            string result = "";
             if (View == "Tiger" || View == "tiger" || View == "Тигр" || View == "тигр")
             {
 
-            Console.WriteLine($"{Name}, кормить мясом!");
+            result = ($"{Name}, кормить мясом!");
             }
             if(View == "Elephant" || View == "elephant" || View == "Слон" || View == "слон")
             {
-                Console.WriteLine($"{Name}, кормить травой!");
+                result = ($"{Name}, кормить травой!");
             }
             if(View == "Penguin" || View == "penguin" || View == "Пингвин" || View == "пингвин")
             {
-                Console.WriteLine($"{Name}, кормить рыбой!");
+                result = ($"{Name}, кормить рыбой!");
             }
+            return result;
         }
     }
 }
